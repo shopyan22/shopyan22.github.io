@@ -1,105 +1,123 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Shopyan22</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Shopyan22</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #a8ff78, #78ffd6, #7afcff); /* hijau muda → toska → biru muda */
+    color: #222;
+  }
 
-        header {
-            background-color: #3e1f67;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+  header {
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* biru laut */
+    color: #fff;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
 
-        header h1 {
-            color: #fff; /* Perubahan warna teks */
-        }
+  header h1 {
+    margin: 0;
+    font-size: 2.4em;
+  }
 
-        main {
-            padding: 20px;
-        }
+  header p {
+    margin-top: 10px;
+    font-size: 1.15em;
+  }
 
-        section {
-            margin-bottom: 40px;
-        }
+  main {
+    padding: 35px 20px;
+  }
 
-        h1, h2 {
-            color: #333;
-        }
+  section {
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
 
-        footer {
-            background-color: #3e1f67;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+  h2 {
+    color: #004d80; /* biru gelap elegan */
+  }
 
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
 
-        .link {
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #fff;
-            color: #3e1f67;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
+  .link {
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* biru toska → biru laut */
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
 
-        .link:hover {
-            background-color: #3e1f67;
-            color: #fff;
-        }
+  .link:hover {
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    transform: translateY(-3px) scale(1.05);
+  }
 
-        @media only screen and (max-width: 600px) {
-            .link {
-                width: 100%;
-            }
-        }
-    </style>
+  footer {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    color: #fff;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 1em;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.25);
+  }
+
+  @media (max-width: 600px) {
+    .link {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
 </head>
 <body>
-    <header>
-        <h1>Welcome to Shopyan22's Portfolio</h1>
-        <p>Web Development | Indonesia</p>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a web developer based in Indonesia, focusing on creating engaging and functional digital experiences. With a passion for quality and innovation, I strive to deliver web solutions tailored to your needs and vision.</p>
-            <p>My portfolio includes a variety of projects ranging from corporate websites to complex web applications. I have experience using various technologies and frameworks, including HTML, CSS, JavaScript, Python, and more.</p>
-            <p>I believe that strong collaboration with clients is the key to success. Therefore, I always communicate actively to ensure that each project reflects your desires and requirements.</p>
-        </section>
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="links">
-                <!-- Your portfolio links can be listed here -->
-                <a href="/tracker/" class="link">Solanatracker</a>
-                <a href="/profitcalculation/" class="link">Profit Calculation</a>
-                <a href="/convert/" class="link">StopLoss & TakeProfit Calculator</a>
-                <a href="/fee-calculator/" class="link">Fee Calculator</a>
-                <a href="/liquiditypairchecker/" class="link">Liquidity Pair Checker</a>
-                <a href="/soltousd/" class="link">Solana to USD Converter</a>
-                <a href="/dexpaid/" class="link">Dexpaid Checker</a>
-                <a href="/usdtoidr/" class="link">USD to IDR Converter</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Contact me: saptaamburegul123@gmail.com</p>
-    </footer>
+  <header>
+    <h1>Welcome to Shopyan22's Portfolio</h1>
+    <p>Web Development | Indonesia</p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Saya seorang web developer dari Indonesia yang fokus menciptakan pengalaman digital yang menarik dan fungsional. Dengan semangat pada kualitas dan inovasi, saya berusaha memberikan solusi web sesuai kebutuhan Anda.</p>
+      <p>Portofolio saya mencakup berbagai proyek, mulai dari website perusahaan hingga aplikasi web kompleks menggunakan HTML, CSS, JavaScript, Python, dan lainnya.</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="links">
+        <a href="/tracker/" class="link">Solanatracker</a>
+        <a href="/profitcalculation/" class="link">Profit Calculation</a>
+        <a href="/convert/" class="link">StopLoss & TakeProfit Calculator</a>
+        <a href="/fee-calculator/" class="link">Fee Calculator</a>
+        <a href="/liquiditypairchecker/" class="link">Liquidity Pair Checker</a>
+        <a href="/soltousd/" class="link">Solana to USD Converter</a>
+        <a href="/dexpaid/" class="link">Dexpaid Checker</a>
+        <a href="/usdtoidr/" class="link">USD to IDR Converter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact me: saptaamburegul123@gmail.com</p>
+  </footer>
 </body>
 </html>
