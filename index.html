@@ -1,126 +1,153 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Shopyan22</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopyan22 Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #a8ff78, #78ffd6, #7afcff); /* hijau muda → toska → biru muda */
-    color: #222;
-  }
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
 
-  header {
-    background: linear-gradient(90deg, #00c6ff, #0072ff); /* biru laut */
-    color: #fff;
-    padding: 35px 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #a1c4fd;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 2.4em;
-  }
-
-  header p {
-    margin-top: 10px;
-    font-size: 1.15em;
-  }
-
-  main {
-    padding: 35px 20px;
-  }
-
-  section {
-    margin-bottom: 50px;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 22px;
-    border-radius: 14px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  }
-
-  h2 {
-    color: #004d80; /* biru gelap elegan */
-  }
-
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-  }
-
-  .link {
-    padding: 14px 28px;
-    background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* biru toska → biru laut */
-    color: #fff;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  }
-
-  .link:hover {
-    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
-    transform: translateY(-3px) scale(1.05);
-  }
-
-  footer {
-    background: linear-gradient(90deg, #0072ff, #00c6ff);
-    color: #fff;
-    text-align: center;
-    padding: 25px 15px;
-    font-size: 1em;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.25);
-  }
-
-  @media (max-width: 600px) {
-    .link {
+    .container {
       width: 100%;
+      max-width: 440px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      padding: 30px 24px;
       text-align: center;
     }
-  }
-</style>
 
+    .avatar {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4a90e2, #9013fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    h1 {
+      font-size: 1.6em;
+      margin-bottom: 6px;
+    }
+
+    p.bio {
+      font-size: 0.95em;
+      color: #777;
+      margin-bottom: 30px;
+      line-height: 1.4em;
+    }
+
+    /* Social icons bar */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    .social-icons a {
+      font-size: 1.4em;
+      color: #4a90e2;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #9013fe;
+      transform: scale(1.2);
+    }
+
+    a.btn {
+      display: block;
+      background-color: #4a90e2;
+      color: white;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 1em;
+      font-weight: 500;
+      transition: background-color 0.3s;
+      margin-bottom: 15px;
+    }
+
+    a.btn:hover {
+      background-color: #3b7bd8;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.8em;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Shopyan22's Portfolio</h1>
-    <p>Web Development | Indonesia</p>
-  </header>
+  <div class="container">
+    <!-- Avatar -->
+    <div class="avatar">S22</div>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Saya seorang web developer dari Indonesia yang fokus menciptakan pengalaman digital yang menarik dan fungsional. Dengan semangat pada kualitas dan inovasi, saya berusaha memberikan solusi web sesuai kebutuhan Anda.</p>
-      <p>Portofolio saya mencakup berbagai proyek, mulai dari website perusahaan hingga aplikasi web kompleks menggunakan HTML, CSS, JavaScript, Python, dan lainnya.</p>
-    </section>
+    <!-- Nama -->
+    <h1>Shopyan22</h1>
+    <p class="bio">
+      Web Developer | Indonesia<br>
+      Menciptakan pengalaman digital yang menarik dan fungsional.
+    </p>
 
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="links">
-        <a href="/tracker/" class="link">Solanatracker</a>
-        <a href="/profitcalculation/" class="link">Profit Calculation</a>
-        <a href="/convert/" class="link">StopLoss & TakeProfit Calculator</a>
-        <a href="/fee-calculator/" class="link">Fee Calculator</a>
-        <a href="/liquiditypairchecker/" class="link">Liquidity Pair Checker</a>
-        <a href="/soltousd/" class="link">Solana to USD Converter</a>
-        <a href="/dexpaid/" class="link">Dexpaid Checker</a>
-        <a href="/usdtoidr/" class="link">USD to IDR Converter</a>
-		<a href="/x280Karakter/" class="link">x280Karakter for Twitter</a>
-		<a href="/password/" class="link">Strong Password Generator</a>
-      </div>
-    </section>
-  </main>
+    <!-- Ikon Sosial Media -->
+    <div class="social-icons">
+      <a href="mailto:saptaamburegul123@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/shopyan22" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/shopyan22" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://twitter.com/shopyan22" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://instagram.com/shopyan22" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
 
-  <footer>
-    <p>Contact me: saptaamburegul123@gmail.com</p>
-  </footer>
+    <!-- Tombol Portfolio -->
+    <a href="/tracker/" class="btn" target="_blank">Solanatracker</a>
+    <a href="/profitcalculation/" class="btn" target="_blank">Profit Calculation</a>
+    <a href="/convert/" class="btn" target="_blank">StopLoss & TakeProfit Calculator</a>
+    <a href="/fee-calculator/" class="btn" target="_blank">Fee Calculator</a>
+    <a href="/liquiditypairchecker/" class="btn" target="_blank">Liquidity Pair Checker</a>
+    <a href="/soltousd/" class="btn" target="_blank">Solana to USD Converter</a>
+    <a href="/dexpaid/" class="btn" target="_blank">Dexpaid Checker</a>
+    <a href="/usdtoidr/" class="btn" target="_blank">USD to IDR Converter</a>
+    <a href="/x280Karakter/" class="btn" target="_blank">x280Karakter for Twitter</a>
+    <a href="/password/" class="btn" target="_blank">Strong Password Generator</a>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 <a href="https://github.com/shopyan22" target="_blank">GitHub Saya</a></p>
+    </footer>
+  </div>
 </body>
 </html>
-
