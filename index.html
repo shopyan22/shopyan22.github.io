@@ -1,15 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shopyan22 Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-  <!-- Font Awesome -->
+  <title>Shopyan22 Portfolio | Terminal</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
+    :root {
+      --neon-green: #00ff41;
+      --dark-bg: #0d0d0d;
+      --panel-bg: rgba(0, 20, 0, 0.8);
+      --scanline: rgba(0, 255, 65, 0.05);
+    }
+
     * {
       box-sizing: border-box;
       padding: 0;
@@ -17,49 +22,72 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #a1c4fd;
-      color: #333;
+      font-family: 'JetBrains Mono', monospace;
+      background-color: var(--dark-bg);
+      /* Efek garis-garis monitor lama */
+      background-image: linear-gradient(var(--scanline) 50%, transparent 50%);
+      background-size: 100% 4px;
+      color: var(--neon-green);
       display: flex;
       justify-content: center;
       padding: 40px 20px;
+      min-height: 100vh;
     }
 
     .container {
       width: 100%;
-      max-width: 440px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      max-width: 480px;
+      background: var(--panel-bg);
+      border: 1px solid var(--neon-green);
+      border-radius: 4px;
+      box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
       padding: 30px 24px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Efek Header Terminal */
+    .container::before {
+      content: "STATUS: ENCRYPTED";
+      display: block;
+      font-size: 10px;
+      text-align: left;
+      margin-bottom: 20px;
+      opacity: 0.7;
+      border-bottom: 1px solid var(--neon-green);
+      padding-bottom: 5px;
     }
 
     .avatar {
       width: 100px;
       height: 100px;
       margin: 0 auto 20px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #4a90e2, #9013fe);
+      border-radius: 0%; /* Kotak lebih terasa gaya hacker */
+      border: 2px solid var(--neon-green);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
+      color: var(--neon-green);
       font-size: 32px;
       font-weight: bold;
-      user-select: none;
+      text-shadow: 0 0 10px var(--neon-green);
+      box-shadow: inset 0 0 15px rgba(0, 255, 65, 0.3);
     }
 
     h1 {
-      font-size: 1.6em;
+      font-size: 1.8em;
       margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
     }
 
     p.bio {
-      font-size: 0.95em;
-      color: #777;
+      font-size: 0.85em;
+      color: var(--neon-green);
+      opacity: 0.8;
       margin-bottom: 30px;
-      line-height: 1.4em;
+      line-height: 1.6em;
     }
 
     /* Social icons bar */
@@ -72,58 +100,78 @@
 
     .social-icons a {
       font-size: 1.4em;
-      color: #4a90e2;
+      color: var(--neon-green);
       text-decoration: none;
-      transition: color 0.3s, transform 0.3s;
+      transition: all 0.3s;
+      opacity: 0.7;
     }
 
     .social-icons a:hover {
-      color: #9013fe;
-      transform: scale(1.2);
+      opacity: 1;
+      transform: translateY(-3px);
+      text-shadow: 0 0 10px var(--neon-green);
     }
 
+    /* Tombol Style Command */
     a.btn {
       display: block;
-      background-color: #4a90e2;
-      color: white;
+      background-color: transparent;
+      color: var(--neon-green);
       text-decoration: none;
-      padding: 14px;
-      border-radius: 10px;
-      font-size: 1em;
-      font-weight: 500;
-      transition: background-color 0.3s;
+      padding: 12px;
+      border: 1px solid var(--neon-green);
+      border-radius: 4px;
+      font-size: 0.9em;
       margin-bottom: 15px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    a.btn::before {
+      content: "> ";
     }
 
     a.btn:hover {
-      background-color: #3b7bd8;
+      background-color: var(--neon-green);
+      color: #000;
+      box-shadow: 0 0 15px var(--neon-green);
+      font-weight: bold;
     }
 
     footer {
       margin-top: 30px;
-      font-size: 0.8em;
-      color: #aaa;
+      font-size: 0.7em;
+      border-top: 1px dashed var(--neon-green);
+      padding-top: 20px;
     }
 
     footer a {
-      color: #4a90e2;
-      text-decoration: none;
+      color: var(--neon-green);
+      text-decoration: underline;
+    }
+
+    /* Animasi kursor berkedip */
+    .blink {
+      animation: blinker 1s linear infinite;
+    }
+
+    @keyframes blinker {
+      50% { opacity: 0; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Avatar -->
     <div class="avatar">S22</div>
 
-    <!-- Nama -->
-    <h1>Shopyan22</h1>
+    <h1>Shopyan22<span class="blink">_</span></h1>
     <p class="bio">
-      Web Developer | Indonesia<br>
+      [System] Web Developer | Indonesia<br>
       Menciptakan pengalaman digital yang menarik dan fungsional.
     </p>
 
-    <!-- Ikon Sosial Media -->
     <div class="social-icons">
       <a href="mailto:saptaamburegul123@gmail.com"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://github.com/shopyan22" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -132,21 +180,20 @@
       <a href="https://instagram.com/shopyan22" target="_blank"><i class="fa-brands fa-instagram"></i></a>
     </div>
 
-    <!-- Tombol Portfolio -->
-    <a href="/tracker/" class="btn" target="_blank">Solanatracker</a>
-    <a href="/profitcalculation/" class="btn" target="_blank">Profit Calculation</a>
-    <a href="/convert/" class="btn" target="_blank">StopLoss & TakeProfit Calculator</a>
-    <a href="/fee-calculator/" class="btn" target="_blank">Fee Calculator</a>
-    <a href="/liquiditypairchecker/" class="btn" target="_blank">Liquidity Pair Checker</a>
-    <a href="/soltousd/" class="btn" target="_blank">Solana to USD Converter</a>
-    <a href="/dexpaid/" class="btn" target="_blank">Dexpaid Checker</a>
-    <a href="/usdtoidr/" class="btn" target="_blank">USD to IDR Converter</a>
-    <a href="/x280Karakter/" class="btn" target="_blank">x280Karakter for Twitter</a>
-    <a href="/password/" class="btn" target="_blank">Strong Password Generator</a>
+    <a href="/tracker/" class="btn" target="_blank">Execute_Solanatracker</a>
+    <a href="/profitcalculation/" class="btn" target="_blank">Calc_Profit</a>
+    <a href="/convert/" class="btn" target="_blank">Calc_Risk_Management</a>
+    <a href="/fee-calculator/" class="btn" target="_blank">Calc_Fee</a>
+    <a href="/liquiditypairchecker/" class="btn" target="_blank">Check_Liquidity_Pair</a>
+    <a href="/soltousd/" class="btn" target="_blank">Convert_SOL_to_USD</a>
+    <a href="/dexpaid/" class="btn" target="_blank">Dexpaid_Checker</a>
+    <a href="/usdtoidr/" class="btn" target="_blank">Convert_USD_to_IDR</a>
+    <a href="/x280Karakter/" class="btn" target="_blank">X_Character_Limit</a>
+    <a href="/password/" class="btn" target="_blank">Gen_Strong_Password</a>
+    <a href="/strongpassword/" class="btn" target="_blank">Gen_Password_DM</a>
 
-    <!-- Footer -->
     <footer>
-      <p>&copy; 2025 <a href="https://github.com/shopyan22" target="_blank">GitHub Saya</a></p>
+      <p>&copy; 2026 :: <a href="https://github.com/shopyan22" target="_blank">root@github/shopyan22</a></p>
     </footer>
   </div>
 </body>
